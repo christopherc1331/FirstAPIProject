@@ -27,7 +27,7 @@ namespace FirstAPIProject.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            var newTree = new TreeDto() { Age = 4, Seasons =["Fall", "Spring"], TreeName = "White Oak" };
+            var newTree = new TreeDto() { Age = 4, Seasons =new List<string>() { "Fall", "Spring" }, TreeName = "White Oak" };
 
             return _treeRepo.GetSeasons(newTree);
 
